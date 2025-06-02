@@ -9,7 +9,7 @@ import os
 
 app = Flask(__name__)
 # Enable CORS for requests from http://localhost:3000
-CORS(app, resources={r"/predict": {"origins": "http://localhost:3000"}})
+CORS(app, resources={r"/predict": {"origins": ["http://localhost:3000", "https://amharic-chars-classif.vercel.app/"]}})
 
 # Load the dataset and model
 hahu = np.load("hahu_datasets.npz")

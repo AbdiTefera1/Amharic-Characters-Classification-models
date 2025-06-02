@@ -44,11 +44,13 @@ export default function Home() {
     formData.append('image', image);
 
     try {
+      console.log("Before I send request")
       const response = await fetch('https://amharic-chars-classif.onrender.com/predict', {
         method: 'POST',
         body: formData,
       });
       const data: { predicted_class?: string; error?: string } = await response.json();
+      console.log("Here is data response: ", data)
       if (data.error) {
         setError(data.error);
       } else {
