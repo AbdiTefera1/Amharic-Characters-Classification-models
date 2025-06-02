@@ -44,7 +44,7 @@ export default function Home() {
     formData.append('image', image);
 
     try {
-      const response = await fetch('http://localhost:5000/predict', {
+      const response = await fetch('https://amharic-chars-classif.onrender.com/predict', {
         method: 'POST',
         body: formData,
       });
