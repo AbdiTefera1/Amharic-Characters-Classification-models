@@ -54,6 +54,7 @@ export default function Home() {
       } else {
         setPrediction(data.predicted_class || '');
       }
+    // eslint-disable-next-line @typescript-eslint/no-unused-vars
     } catch (err) {
       setError('Failed to get prediction');
     } finally {
